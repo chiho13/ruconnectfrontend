@@ -1,0 +1,169 @@
+.events-container {
+  width:95%;
+  margin: 0 auto;
+}
+
+.tab-card{
+    min-height: 410px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    margin-bottom: 30px;
+    border: 1px solid #ccc
+}
+
+
+.bio-card {
+  min-height: 500px;
+}
+
+
+
+.papereffect {
+
+  position: relative;
+  -webkit-box-shadow:0 1px 4px rgba(100, 100, 100, 0.1), 0 0 40px rgba(0, 0, 0, 0.0) inset;
+       -moz-box-shadow:0 1px 4px rgba(100, 100, 100, 0.1), 0 0 40px rgba(0, 0, 0, 0.0) inset;
+            box-shadow:0 1px 4px rgba(100, 100, 100, 0.1), 0 0 40px rgba(0, 0, 0, 0.0) inset;
+}
+
+/*.papereffect:before, .papereffect:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}*/
+
+.papereffect:after {
+
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.card{
+    background-color: #fefefe;
+    padding: 1px;
+    width: 100%;
+}
+
+.tab-card .tab-content {
+  min-height: 340px;
+  
+}
+.tab-container{
+   
+    padding-top: 40px;
+    z-index: 3;
+
+}
+
+.events-header {
+  background-color: #313447;
+  color: white;
+  padding: 25px 0;
+}
+
+.banner-event img{
+  width:100%;
+min-height:170px;
+background-size: cover;
+object-fit:cover;
+ 
+}
+
+#calendar {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 10px;
+    padding:20px;
+}
+.fc-header-title h2 {
+    font-size: .9em;
+    white-space: normal !important;
+}
+.fc-view-month .fc-event, .fc-view-agendaWeek .fc-event {
+    font-size: 0;
+    overflow: hidden;
+    height: 2px;
+}
+.fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+.fc-agenda-axis {
+    width: 20px !important;
+    font-size: .7em;
+}
+
+.fc-button-content {
+    padding: 0;
+}
+
+
+/*@media screen and (max-width:991px){
+    .banner-event img{
+  
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+}*/
+
+
+@media screen and (max-width:767px){
+    .banner-event img{
+ /* padding-left: 50px;*/
+ width: 150%;
+  background-size: cover;
+  background-position: 100px;
+ margin-bottom:0;
+}
+
+}
+
+
+@media screen and (max-width:479px){
+    .banner-event img{
+ /* padding-left: 50px;*/
+ width: 180%;
+  background-size: cover;
+  background-position: 100px;
+
+ 
+}
+
+}
+
+

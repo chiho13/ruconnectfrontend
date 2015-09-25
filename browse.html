@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RU Connect</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/pages/profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+<!--     <link rel="stylesheet" href="assets/css/normalize.css"> -->
+     <link rel="stylesheet" href="assets/css/pages/browse.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/footers/footer-default.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+       
+
+    <nav class="navbar navbar-fixed-top ru-nav" role="navigation">
+        <a href="#">
+            <img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" height="84px" src="https://s3.amazonaws.com/ruconnect-assets/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+        </a>
+
+        <div>
+             <ul class="nav navbar-nav navbar-right main-menu-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Connected<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admin View</a></li>
+                        <li><a href="#">Non-admin View</a></li>
+                        
+                     </ul>
+                </li>
+                 <li><a href="#">myryerson.ca</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><i class="fa fa-envelope"></i></span> My Conversations<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Trash</a></li>
+                     </ul>
+                </li>
+
+               
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span> <img class="media-object nav-avatar" src="img/organisersanthony.png" style=""></span>Anthony Ho<span class="caret"></span></a>
+                    <ul class="dropdown-menu profile-menu">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <hr style="margin: 5px 0">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+  
+    </nav>
+
+  <!--   <div class="browse-wrapper">
+        <div class="row"> -->
+            
+    <!-- <div class="col-xs-3"> -->
+
+    <div class="sidebar-search-bar">
+
+        <div class="container">
+            <div class="row">
+            
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-search" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                
+            </div>
+        </div>
+            <br> 
+            <h4 class="sidebar-title">Filter: </h4>
+            <br>
+            
+
+            <div class= "filtering row">
+                <h4 class="sidebar-title">EDUCATION </h4>
+
+                <ul class="filters-check">
+                <li>
+                <label class"search-check" for="check-one">
+                
+                  <input type="checkbox" name="check-one" id="check-one" value="checkone"/>
+                
+                  <i></i> <span>Bachelors</span>
+                
+                </label>
+                </li>
+                
+                   
+                <li>
+                <label class"search-check" for="check-two">
+                
+                  <input type="checkbox" name="check-two" id="check-two" value="check-two"/>
+                
+                  <i></i> <span>Masters</span>
+                
+                </label>
+                </li>
+                   
+                <li>
+                <label class"search-check" for="check-three">
+                
+                  <input type="checkbox" name="check-three" id="check-three" value="check-three"/>
+                
+                  <i></i> <span>Doctorate</span>
+                
+                </label>
+                </li>
+
+                <li>
+                <label class"search-check" for="check-four">
+                
+                  <input type="checkbox" name="check-four" id="check-four" value="check-four"/>
+                
+                  <i></i> <span>Doctorate</span>
+                
+                </label>
+                </li>
+
+                   <li>
+                <label class"search-check" for="check-five">
+                
+                  <input type="checkbox" name="check-five" id="check-five" value="check-five"/>
+                
+                  <i></i> <span>Designation</span>
+                
+                </label>
+                </li>
+                </ul>
+
+                <h4 class="sidebar-title">INDUSTRY</h4>
+
+        
+
+                <ul class="filters-check">
+                <li>
+                <label class"search-check" for="check-six">
+                
+                  <input type="checkbox" name="check-six" id="check-six" value="check-six"/>
+                
+                  <i></i> <span>Marketing</span>
+                
+                </label>
+                </li>
+                
+                   
+                <li>
+                <label class"search-check" for="check-seven">
+                
+                  <input type="checkbox" name="check-seven" id="check-seven" value="check-seven"/>
+                
+                  <i></i> <span>Finance</span>
+                
+                </label>
+                </li>
+                   
+                <li>
+                <label class"search-check" for="check-eight">
+                
+                  <input type="checkbox" name="check-eight" id="check-eight" value="check-eight"/>
+                
+                  <i></i> <span>Accounting</span>
+                
+                </label>
+                </li>
+
+                <li>
+                <label class"search-check" for="check-nine">
+                
+                  <input type="checkbox" name="check-nine" id="check-nine" value="check-nine"/>
+                
+                  <i></i> <span>Economics</span>
+                
+                </label>
+                </li>
+
+                   <li>
+                <label class"search-check" for="check-ten">
+                
+                  <input type="checkbox" name="check-ten" id="check-ten" value="check-ten"/>
+                
+                  <i></i> <span>Engineering</span>
+                
+                </label>
+                </li>
+                </ul>
+            </div>
+        
+
+    </div>
+    <!-- </div> -->
+     <div class="results-container">       
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-2 results-page">
+       
+            <div class="row justify-profile">
+                <div class="col-xs-2 col-xs-offset-1 wider connections">
+                    <div data-content="Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)" class="profile-overlay">
+                    <img src="img/jgl.jpg" alt="" />
+                      
+                         <div class="row"> 
+                            <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                         <div class="row name"> 
+                            <h4> Joseph Gordon-Levitt</h4>
+                            <h5> Actor, Singer, Filmmaker </h5>
+                        </div>
+                        
+                
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/leo.jpg" alt="" />
+                        
+                        <div class="row"> 
+                             <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                         <div class="row name"> 
+                            <h4> Leonardo DiCaprio</h4>
+                            <h5> Actor, Producer </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ken.jpg" alt="" />
+                         
+                        <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                        <div class="row name"> 
+                            <h4> Ken Watanabe</h4>
+                            <h5> Actor</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ksh.jpg" alt="" />
+                        
+                         <div class="row"> 
+                           <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                         <div class="row name"> 
+                            <h4>Kim Soo Hyun</h4>
+                            <h5> Actor </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/obama.jpg" alt="" />
+                          
+                         <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                        <div class="row name"> 
+                            <h4> Barack Obama</h4>
+                            <h5> President of the United State of America </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+            </div>
+
+        
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-2 results-page">
+       
+            <div class="row justify-profile">
+                <div class="col-xs-2 col-xs-offset-1 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/jgl.jpg" alt="" />
+                         <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/leo.jpg" alt="" />
+                        <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ken.jpg" alt="" />
+                        <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ksh.jpg" alt="" />
+                         <div class="row"> 
+                               <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/obama.jpg" alt="" />
+                         <div class="row"> 
+                              <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+            </div>
+
+        
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-2 results-page">
+       
+            <div class="row justify-profile">
+                <div class="col-xs-2 col-xs-offset-1 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/jgl.jpg" alt="" />
+                         <div class="row"> 
+                           <a href="http://ruconnect.ca" class="btn btn-connections">Connect</a>
+                        </div>
+                
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/leo.jpg" alt="" />
+                        <div class="row"> 
+                            <a href="http://ruconnect.ca" class="btn btn-connections">Connect</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ken.jpg" alt="" />
+                        <div class="row"> 
+                           <a href="http://ruconnect.ca" class="btn btn-connections">Connect</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/ksh.jpg" alt="" />
+                         <div class="row"> 
+                            <a href="http://ruconnect.ca" class="btn btn-connections">Connect</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div class="col-xs-2 wider connections">
+                    <div class="profile-overlay">
+                        <img src="img/obama.jpg" alt="" />
+                         <div class="row"> 
+                            <button class="btn btn-connections">Connect</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+            </div>
+
+        
+    </div>
+    </div>
+    </div>
+ 
+    <div class= "col-xs-12 footer margin-top:200px">
+        <p> &copy 2015. Powered by 1 Degree Labs. All Rights Reserved. </p>
+    </div>
+   </div>
+
+
+
+    
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  
+    <script src= "js/modernizr.js"></script> 
+    <script src= "assets/js/app.js"></script> 
+
+    <script> 
+           $(document).ready(function () {
+               $('.profile-overlay:before').each(function() {
+             var link = $(this).html();
+        $(this).contents().wrap('<a href="ruconnect.ca'+link+'"></a>');
+                });
+            });
+    </script>
+
+
+</body>
+
+</html>

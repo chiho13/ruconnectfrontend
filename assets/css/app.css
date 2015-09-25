@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,700,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+html, body{
+	width:100%;
+	overflow-x:hidden;
+	 font-family: 'Roboto', sans-serif;
+	 height:100%;
+
+}
+
+body {
+	overflow-y:auto;
+	background: #f7f7f7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/*h3, h4 {
+
+	font-weight: 400;
+}
+
+*/
+
+.btn {
+	box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none !important;
+  box-shadow:none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0;
+
+}
+
+.panel-default> .panel-heading {
+	background-color: #1C5A98;
+	color: #fff;
+}
+
+input {
+	display:inline-block;
+}
+
+
+ /* connect button */
+
+
+.profile-header {
+/*  background-color: #313447;*/
+background: url("images/ryersonbg.png");
+background-size: 100%; 
+  width:100%;
+  margin:0;
+  height:auto;
+  color: #fff;
+  padding: 25px 0;
+}
+
+
+@media all and (max-width: 623px) { 
+  .profile-header {
+  background-size: cover;
+}
+}
+
+
+

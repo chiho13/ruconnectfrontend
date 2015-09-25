@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RU Connect</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+<!--     <link href="assets/css/pages/events.css" rel="stylesheet"> -->
+   
+    
+     
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="assets/css/footers/footer-default.css"> -->
+    <link href="assets/css/pages/conversation.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--calendar plugin --> 
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+
+    
+    <link rel="stylesheet" href="assets/plugins/fullcalendar.css">
+    <link rel="stylesheet" href="assets/plugins/maps.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap.vertical-tabs.css">
+     <link rel="stylesheet" href="assets/css/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/buttons.css" /> 
+    <link href="assets/css/pages/hubpage.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+       
+
+    <nav class="navbar navbar-fixed-top ru-nav" role="navigation">
+        <a href="#">
+            <img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" height="84px" src="https://s3.amazonaws.com/ruconnect-assets/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+        </a>
+
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+             <ul class="nav navbar-nav navbar-right main-menu-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Connected<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admin View</a></li>
+                        <li><a href="#">Non-admin View</a></li>
+                        
+                     </ul>
+                </li>
+                 <li><a href="#">myryerson.ca</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><i class="fa fa-envelope"></i></span> My Conversations<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Trash</a></li>
+                     </ul>
+                </li>
+
+               
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span> <img class="media-object nav-avatar" src="img/organisersanthony.png" style=""></span>Anthony Ho<span class="caret"></span></a>
+                    <ul class="dropdown-menu profile-menu">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <hr style="margin: 5px 0">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+  
+    </nav>
+
+    
+    
+    
+    <div class="col-sm-12 conversation-container">
+                <section class="panel conversation-panel">
+                    <header class="panel-heading wht-bg">
+                       <h4 class="gen-case">Conversations (3)
+                        <form action="#" class="pull-right mail-src-position">
+                            <div class="input-append">
+                                <input type="text" class="form-control search-mail" placeholder="Search Mail">
+                            </div>
+                        </form>
+                       </h4>
+                    </header>
+                    <div class="panel-body minimal">
+                        <div class="mail-option">
+                            <div class="chk-all">
+                                <div class="pull-left mail-checkall">
+                                    <input type="checkbox" class="">
+                                </div>
+
+                                <div class="btn-group">
+                                    <a data-toggle="dropdown" href="#" class="btn mini all">
+                                        All
+                                        <i class="fa fa-angle-down "></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"> None</a></li>
+                                        <li><a href="#"> Read</a></li>
+                                        <li><a href="#"> Unread</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+                                    <i class=" fa fa-refresh"></i>
+                                </a>
+                            </div>
+                            <div class="btn-group hidden-phone">
+                                <a data-toggle="dropdown" href="#" class="btn mini blue">
+                                    More
+                                    <i class="fa fa-angle-down "></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-trash-o"></i> Move to Trash</a></li>
+                                </ul>
+                            </div>
+                           <!--  <div class="btn-group">
+                                <a data-toggle="dropdown" href="#" class="btn mini blue">
+                                    Move to
+                                    <i class="fa fa-angle-down "></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-pencil"></i>Draft</a></li>
+                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                </ul>
+                            </div> -->
+
+                           
+                        </div>
+                        <div class="table-inbox-wrap " id="responsive-table">
+                            <!-- <table class="table table-inbox table-hover">
+                        <tbody>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th>Recipient</th>
+                           <th>Subject</th>
+                           <th></th>
+                           <th>Date</th>
+                         </tr>
+                        <tr class="unread">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+
+                            <td class="avatar-cells1 blocky"><img class="media-object circular mail-avatar" src="assets/img/leo.jpg" width="40"></td>
+                            <td class="view-message  profile-name dont-show blocky"><a href="mail_view.html"> Leonardo DiCAp</a></td>
+                            <td class="view-message blocky"><a href="mail_view.html">I would like to have coffee</a></td>
+                            <td class="view-message  inbox-small-cells"></td>
+                            <td class="view-message  text-left">08:10 AM</td>
+                        </tr>
+                        <tr class="unread">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                             <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/marl.png" width="40"></td>
+                            <td data-th="Recipient" class="view-message profile-name dont-show"><a href="mail_view.html">Mark Thompson</a></td>
+                            <td data-th="Subject"class="view-message"><a href="mail_view.html">Last project updates</a></td>
+                            <td data-th="" class="view-message inbox-small-cells"></td>
+                            <td data-th="date" class="view-message text-left">Aug 29</td>
+                        </tr>
+                        <tr class="unread">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/ken.jpg" width="40"></td>
+                            <td class="view-message profile-name dont-show"><a href="mail_view.html">Ken Wat</a></td>
+                            <td class="view-message"><a href="mail_view.html">Please connect with me</a></td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 25</td>
+                        </tr>
+                        <tr class="">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/carol.png" width="40"></td>
+                            <td class="view-message dont-show"><a href="mail_view.html">Priscilla Blanda</a></td>
+                            <td class="view-message"><a href="mail_view.html">Please connect with me</a></td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 23</td>
+                        </tr>
+                        <tr class="">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/jgl.jpg" width="40"></td>
+                            <td class="view-message dont-show"><a href="mail_view.html">Joseph Gordon Levitt</a></td>
+                           <td class="view-message"><a href="mail_view.html">Please connect with me</a></td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 19</td>
+                        </tr>
+                        <tr class="">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/coleen.png" width="40"></td>
+                            <td class="view-message dont-show"><a href="mail_view.html">Wilma Dooley</a></td>
+                            <td class="view-message"><a href="mail_view.html">Please connect with me</a></td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 18</td>
+                        </tr>
+                        <tr class="">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/bob.png" width="40"></td>
+                            <td class="view-message dont-show">Bob</td>
+                            <td class="view-message"><a href="mail_view.html">Please connect with me</a></td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 14</td>
+                        </tr>
+                        <tr class="">
+                            <td class="inbox-small-cells">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                              <td class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/ksh.jpg" width="40"></td>
+                            <td class="view-message dont-show">Kim Soo Hyun</td>
+                            <td class="view-message view-message">Meeting this week</td>
+                            <td class="view-message inbox-small-cells"></td>
+                            <td class="view-message text-left">Aug 11</td>
+                        </tr>
+                        </tbody>
+                        </table>
+ -->
+                        <table class="rwd-table table-hover">
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Recipient</th>
+    <th></th>
+    <th>Subject</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td class="inbox-small-cells" style="left:0">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells" style="left:0"><i class="fa fa-star inbox-started"></i></td>
+                            <td data-th="" class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/marl.png" width="40"></td>
+    <td class="recipient" data-th="Recipient"><span> Marl</span></td>
+    <td class="subject" data-th="Subject">Please connect with me</td>
+
+    <td data-th="Date">12:20pm</td>
+   
+  </tr>
+  <tr>
+    <td class="inbox-small-cells" style="left:0">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells" style="left:0"><i class="fa fa-star"></i></td>
+                            <td data-th="" class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/leo.jpg" width="40"></td>
+    <td class="recipient" data-th="Recipient"><span> Leo DiCap</span></td>
+    <td class="subject" data-th="Subject">Please have lunch with me</td>
+
+    <td data-th="Date">Sept 15th 2015</td>
+   
+  </tr>
+ <tr>
+    <td class="inbox-small-cells" style="left:0">
+                                <input type="checkbox" class="mail-checkbox">
+                            </td>
+                            <td class="inbox-small-cells" style="left:0"><i class="fa fa-star"></i></td>
+                            <td data-th="" class="avatar-cells"><img class="media-object circular mail-avatar" src="assets/img/users/bob.png" width="40"></td>
+    <td class="recipient" data-th="Recipient"><span> Bob</span></td>
+    <td class="subject" data-th="Subject">Please connect with me</td>
+
+    <td data-th="Date">12:20pm</td>
+   
+  </tr>
+</table>
+         <ul class="unstyled inbox-pagination">
+              <li><span>1-50 of 99</span></li>
+                 <li>
+                     <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
+                  </li>
+                <li>
+                   <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
+            </li>
+         </ul>
+                           
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+ 
+
+      
+
+
+ 
+    <div class= "col-xs-12 footer">
+        <p> &copy 2015. Powered by 1 Degree Labs. All Rights Reserved. </p>
+    </div>
+   
+
+
+    
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+
+    <script src="assets/plugins/fullcalendar.js"></script>
+    <script src="assets/plugins/moment.min.js"></script>
+   
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.js"></script>
+  
+<!--google maps api --> 
+
+    <script src="assets/plugins/gmaps.js"></script>
+<!-- <script src="gmaps.js"></script> -->
+    <!-- <script src= "assets/js/app.js"></script>  --> 
+
+    <script src="assets/plugins/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
+    <script> 
+
+    </script>
+
+<script>
+   
+    $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+    
+        $('#calendar').fullCalendar({
+            header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        editable: true,
+        
+        // add event name to title attribute on mouseover
+        eventMouseover: function(event, jsEvent, view) {
+            if (view.name !== 'agendaDay') {
+                $(jsEvent.target).attr('title', event.title);
+            }
+        },
+        
+        // For DEMO only
+        // *************
+        events: [
+            {
+            title: 'All Day Event',
+            start: new Date(2015, 9, 1)},
+        {
+            title: 'Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2)},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d - 3, 16, 0),
+            allDay: false},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d + 4, 16, 0),
+            allDay: false},
+        {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false},
+        {
+            title: 'Lunch',
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false},
+        {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false},
+        {
+            title: 'Click for Google',
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: 'http://google.com/'}
+        ]
+        });
+
+});
+
+</script>
+
+ <script>
+
+    // var map;
+    // $(document).ready(function(){
+    //   map = new GMaps({
+    //     el: '#map',
+    //     lat: -12.043333,
+    //     lng: -77.028333
+    //   });
+    //   map.addMarker({
+    //     lat: -12.043333,
+    //     lng: -77.03,
+    //     title: 'Lima',
+    //     details: {
+    //       database_id: 42,          
+    //       author: 'HPNeo'
+    //     },
+    //     click: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //       alert('You clicked in this marker');
+    //     },
+    //     mouseover: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //     }
+    //   });
+
+    // });
+
+// </script>
+  
+
+
+</body>
+
+</html>
+
+
+<!--   <div id="map"></div> -->
+
+

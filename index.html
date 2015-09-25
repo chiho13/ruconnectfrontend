@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+
+<head>
+	<title>RU Connect</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" 	content="RU Connect">
+	<meta name="keywords" 		content="Ryerson University, RU Connect, 1 Degree Labs" />
+	<meta name="author" 			content="1 Degree Labs">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- CSS Implementing Plugins -->
+	<!-- <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<!-- CSS Page Style -->    
+	<link rel="stylesheet" href="assets/css/pages/browse.css">
+	<link rel="stylesheet" href="assets/css/pages/coming_soon.css">
+	<link rel="stylesheet" href="assets/css/pages/profile.css">
+	<link rel="stylesheet" href="assets/css/pages/settings.css">
+	
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	
+	<!-- Rails -->
+	<!-- <%# csrf_meta_tags %> -->
+</head>	
+
+<body>  
+
+<div class="wrapper">
+	<!--=== Header ===-->    
+	<div class="header">
+		<!-- Navbar -->
+		<!-- TODO: check navbar-default and navbar color issue -->
+		<nav class="navbar navbar-default navbar-fixed-top ru-nav" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top: 23px;">
+		        <span class="sr-only">Toggle navigation</span>
+		        <i class="fa fa-bars"></i>
+		      </button>
+					<a href="#">
+						<img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" src="assets/img/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+					</a>
+					<img alt="RU Connect Beta" class="navbar-brand navbar-brand-img hidden-sm hidden-xs" src="assets/img/ruconnect-beta-navbar.png" style="margin-left: -3px; height:84px; width:275px;" height="84px" width="275px">
+					<img alt="RU Connect Beta" class="navbar-brand navbar-brand-img visible-sm-block visible-xs-block hide-under-fourhundred" src="assets/img/ruconnect-beta-navbar-xs.png" style="margin-left: -3px;">
+					
+				</div>
+				<div id="navbar" class="collapse navbar-collapse" style="background-color: white" role="navigation">
+					<ul class="nav navbar-nav navbar-right main-menu-nav">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								Get Connected<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Admin View</a></li>
+								<li><a href="#">Non-admin View</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">myryerson.ca</a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<span><i class="fa fa-envelope"></i></span> 
+								<span class="hidden-sm hidden-md">My Conversations</span><span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Inbox</a></li>
+								<li><a href="#">Sent</a></li>
+								<li><a href="#">Trash</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<span><img class="nav-avatar" src="img/organisersanthony.png" style=""></span>
+								<span class="hidden-sm hidden-md">Anthony Ho</span><span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu profile-menu">
+								<li><a href="#">View Profile</a></li>
+								<li><a href="#">Edit Profile</a></li>
+								<li><a href="#">Settings</a></li>
+								<hr style="margin: 5px 0">
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>         
+		<!-- End Navbar -->
+	</div>
+	<!--=== End Header ===-->    
+	
+	<!--=== Content Part ===-->
+	<div class="container content">	
+		
+		<!-- HERO
+		================================= -->
+		<section id="hero" class="hero-section hero-layout-classic hero-layout-features-and-form section section-dark" style="margin:0">
+
+			<div class="section-background">
+
+				<!-- IMAGE BACKGROUND -->
+				<div class="section-background-image parallax" data-stellar-ratio="0.4">
+					<img src="img/brands/ryerson/bg.jpg" alt="Ryerson" style="opacity: 0.2;">
+				</div>
+
+			</div>
+
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-content-inner">
+
+						<div class="hero-heading row" data-animation="fadeIn">
+							<div class="col-md-12">
+								<h2 class="hero-title">Become A Mentor At Ryerson</h2>
+								<p class="hero-tagline">The Ted Rogers School of Management is helping to connect all generations of Ryerson</p>
+							</div>
+						</div>
+
+						<div class="hero-features row">
+							<div class="hero-features-left col-md-12" style="text-align:center;">
+								<div class="closing-buttons" data-animation="tada">
+									<a href="#" class="anchor-link btn btn-lg btn-primary btn-email" style="margin:0;margin-bottom:5px" data-toggle="modal" data-target="#registrationModal">Reserve Your Account</a>
+								</div>
+								<p style="font-size: 0.8em;">It takes less than two minutes (or we will buy you lunch!)</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- VIDEO SECTION
+		================================= -->
+		<section id="video" class="video-section section-gray section" style="margin:0">
+
+			<div class="container">
+
+				<h2 class="section-heading text-center">Here is Our Vision</h2>
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+
+						<div class="video-embed">
+
+							<!-- VIDEO EMBED FROM YOUTUBE -->
+							<iframe class="video-async" data-source="youtube" data-video="XhfM-lQVumc" allowfullscreen></iframe>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- INDUSTRY LEADERS
+		================================= -->
+		<section id="how-it-works" class="how-it-works-section section" style="margin:0">
+
+			<div class="container-fluid">
+
+				<h2 class="section-heading text-center">Learn from the leaders of The Ted Rogers School Of Management</h2>
+
+				<div class="hiw-row row">
+
+					<!-- LEADERS - ITEM 1 -->
+					<div class="col-sm-4" data-animation="fadeIn">
+						<div class="hiw-item" style="margin: 0 0 60px 0;border: 3px solid #<%= @accent_color_one %>;">
+							<div class="hiw-item-text">
+								<span class="hiw-item-icon" style="border: 3px solid #<%= @accent_color_one %>;">
+									<%= image_tag("brands/#{@brand}/#{@expert[:one][:file]}.jpg", :alt => "#{@expert_one_name}", :style => "border-radius: 50%;") %>
+								</span>
+								<h4 class="hiw-item-title" style="height: 30px;"><%= @expert[:one][:name] %></h4>
+								<p class="hiw-item-description" style="height: 69px;margin-bottom: 0;"><%= @expert[:one][:title] %></p>
+								<span style="border: 7px solid #<%= @accent_color_two %>; position: absolute; top: 0; left: 50%; margin: 246px 0 0 -63px; color: white; background-color:#<%= @accent_color_two %>">
+									COMING SOON
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="visible-xs-block" style="height:50px"></div>
+
+					<!-- LEADERS - ITEM 2 -->
+					<div class="col-sm-4" data-animation="fadeIn">
+						<div class="hiw-item" style="margin: 0 0 60px 0;border: 3px solid #<%= @accent_color_one %>;">
+							<div class="hiw-item-text">
+								<span class="hiw-item-icon" style="border: 3px solid #<%= @accent_color_one %>;">
+									<%= image_tag("brands/#{@brand}/#{@expert[:two][:file]}.jpg", :alt => "#{@expert_two_name}", :style => "border-radius: 50%;") %>
+								</span>
+								<h4 class="hiw-item-title" style="height: 30px;"><%= @expert[:two][:name] %></h4>
+								<p class="hiw-item-description" style="height: 69px;margin-bottom: 0;"><%= @expert[:two][:title] %></p>
+								<span style="border: 7px solid #<%= @accent_color_two %>; position: absolute; top: 0; left: 50%; margin: 246px 0 0 -63px; color: white; background-color:#<%= @accent_color_two %>">
+									COMING SOON
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="visible-xs-block" style="height:50px"></div>
+
+					<!-- LEADERS - ITEM 3 -->
+					<div class="col-sm-4" data-animation="fadeIn">
+						<div class="hiw-item" style="margin: 0 0 60px 0;border: 3px solid #<%= @accent_color_one %>;">
+							<div class="hiw-item-text">
+								<span class="hiw-item-icon" style="border: 3px solid #<%= @accent_color_one %>;">
+									<%= image_tag("brands/#{@brand}/#{@expert[:three][:file]}.jpg", :alt => "#{@expert_three_name}", :style => "border-radius: 50%;") %>
+								</span>
+								<h4 class="hiw-item-title" style="height: 30px;"><%= @expert[:three][:name] %></h4>
+								<p class="hiw-item-description" style="height: 69px;margin-bottom: 0;"><%= @expert[:three][:title] %></p>
+								<span style="border: 7px solid #<%= @accent_color_two %>; position: absolute; top: 0; left: 50%; margin: 246px 0 0 -63px; color: white; background-color:#<%= @accent_color_two %>">
+									COMING SOON
+								</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- BENEFITS
+		================================= -->
+		<section id="numbers" class="numbers-section section-dark section" style="margin:0">
+
+			<div class="section-background">
+
+				<!-- IMAGE BACKGROUND -->
+				<div class="section-background-image parallax" data-stellar-ratio="0.4">
+					<%= image_tag("brands/#{@brand}/bg.jpg", :alt => "#{@brand_full_name}", :style => "opacity: 0.2;") %>
+				</div>
+
+			</div>
+
+			<div class="container">
+
+				<h2 class="section-heading text-center">Ryerson students will benefit through</h2>
+
+				<div class="numbers-row row">
+
+					<!-- NUMBERS - ITEM 1 -->
+					<div class="col-md-3 col-sm-6">
+						<div class="numbers-item">
+							<div style="border: 4px solid #fff; border-radius: 50%; height: 116px; width: 116px; margin: 0 auto 20px;">
+								<span class="benefit-icon fa fa-check" style="font-size: 48px; line-height: 111px; color: #fff;" data-animation="bounceIn"></span>
+							</div>
+							<div class="numbers-item-caption">Career Advice</div>
+						</div>
+					</div>
+
+					<!-- NUMBERS - ITEM 2 -->
+					<div class="col-md-3 col-sm-6">
+						<div class="numbers-item">
+							<div style="border: 4px solid #fff; border-radius: 50%; height: 116px; width: 116px; margin: 0 auto 20px;">
+								<span class="benefit-icon fa fa-file-text-o" style="font-size: 48px; line-height: 111px; color: #fff;" data-animation="bounceIn"></span>
+							</div>
+							<div class="numbers-item-caption">Resume Critique</div>
+						</div>
+					</div>
+
+					<!-- NUMBERS - ITEM 3 -->
+					<div class="col-md-3 col-sm-6">
+						<div class="numbers-item">
+							<div style="border: 4px solid #fff; border-radius: 50%; height: 116px; width: 116px; margin: 0 auto 20px;">
+								<span class="benefit-icon fa fa-briefcase" style="font-size: 48px; line-height: 111px; color: #fff;" data-animation="bounceIn"></span>
+							</div>
+							<div class="numbers-item-caption">Mock Interviews</div>
+						</div>
+					</div>
+
+					<!-- NUMBERS - ITEM 4 -->
+					<div class="col-md-3 col-sm-6">
+						<div class="numbers-item">
+							<div style="border: 4px solid #fff; border-radius: 50%; height: 116px; width: 116px; margin: 0 auto 20px;">
+								<span class="benefit-icon fa fa-search" style="font-size: 48px; line-height: 111px; color: #fff;" data-animation="bounceIn"></span>
+							</div>
+							<div class="numbers-item-caption">Job Insight</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- COFFEE SPONSORSHIP
+		================================= -->
+		<section id="pricing" class="pricing-section section-gray section" style="margin:0">
+
+			<div class="container">
+
+				<h2 class="section-heading text-center">The first coffee will be on us</h2>
+
+				<div class="row text-center">
+					<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+						<p>We will be announcing our official coffee sponsor on October 3rd at our Alumni Weekend Launch Party!</p>
+					</div>
+				</div>
+
+				<div class="sponsors-row" data-animation="bounceIn">
+					<%= image_tag("coffee-cup.gif", :alt => 'Coffee Sponsor', :style => "margin:0 auto;") %>
+				</div>
+
+				<div class="hero-features row">
+
+					<div class="hero-features-left col-md-12" style="text-align:center;">
+
+						<div class="closing-buttons" data-animation="tada">
+							<a href="#" class="anchor-link btn btn-lg btn-primary btn-email" style="margin:0;margin-bottom:5px" data-toggle="modal" data-target="#registrationModal">Reserve Your Account</a>
+						</div>
+						<p style="font-size: 0.8em;">It takes less than two minutes (or we will buy you lunch!)</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- SPONSORS
+		================================= -->
+		<section id="testimonial" class="testimonial-section section" style="margin:0">
+
+			<div class="container">
+
+				<h2 class="section-heading text-center">This project wouldn't be possible without our amazing partners!</h2>
+
+
+				<div class="row">
+					<div id="small-img" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+					  <ul class="list-unstyled">
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/rcs.jpg", :alt => 'RCS', :class => "img-responsive inline-block"), "http://www.rcsonline.ca/", :target => "_blank" %>
+							</li>
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/trsm.jpg", :alt => 'TRSM', :class => "img-responsive inline-block"), "http://www.ryerson.ca/tedrogersschool/", :target => "_blank" %>
+							</li>
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/cpa.jpg", :alt => 'CPA', :class => "img-responsive inline-block"), "http://www.cpaontario.ca/", :target => "_blank" %>
+							</li>
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/hss.png", :alt => 'Hogg, Shain & Scheck', :class => "img-responsive inline-block"), "http://www.hss-ca.com/", :target => "_blank" %>
+							</li>
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/launchzone.png", :alt => 'Launch Zone', :class => "img-responsive inline-block"), "http://launchzone.ryerson.ca/", :target => "_blank" %>
+							</li>
+							<li class="col-sm-4 col-xs-6" style="margin-bottom:15px;">
+								<%= link_to image_tag("partners/bch.jpg", :alt => 'Business Career Hub', :class => "img-responsive inline-block"), "http://www.ryerson.ca/trsmcareers/index.html.html", :target => "_blank" %>
+							</li>
+					   </ul>            
+					</div>
+				</div>
+
+				<div class="testimonial-row row">
+
+					<!-- AWARD ITEM 1 -->
+					<div class="col-sm-6">
+						<div class="testimonial">
+							<blockquote class="testimonial-quote" style="margin-bottom: 20px;">
+									<span class="testimonial-ratings" style="float:left; line-height: 1.3em;">
+										<span class="fa fa-trophy"></span>
+									</span>
+									<p style="height: 56px;"> Recipient of the RECODE Student Project Award</p>
+							</blockquote>
+							<%= link_to image_tag("partners/recode.png", :alt => 'Recode', :style => 'max-height: 98px; margin: 50px auto;'), "http://re-code.ca/", :target => "_blank" %>
+						</div>
+					</div>
+
+					<!-- AWARD ITEM 2 -->
+					<div class="col-sm-6">
+						<div class="testimonial">
+							<blockquote class="testimonial-quote" style="margin-bottom: 20px;">
+								<span class="testimonial-ratings" style="float:left; line-height: 1.3em;">
+									<span class="fa fa-trophy"></span>
+								</span>
+								<p style="height: 56px;"> Recipient of the RBC Immigrant, Diversity, and Inclusion Project Grant</p>
+							</blockquote>
+							<%= link_to image_tag("partners/rbc.png", :alt => 'RBC', :style => 'max-height: 98px; margin: 50px auto;'), "http://www.rbcroyalbank.com/", :target => "_blank" %>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- CLOSING
+		================================= -->
+		<section id="closing" class="closing-section section-dark section" style="margin:0">
+
+			<div class="section-background">
+
+				<!-- IMAGE BACKGROUND -->
+				<div class="section-background-image parallax" data-stellar-ratio="0.4">
+					<%= image_tag("brands/#{@brand}/bg.jpg", :alt => "#{@brand_full_name}", :style => "opacity: 0.15;") %>
+				</div>
+
+			</div>
+
+			<div class="container">
+
+				<h3 class="closing-shout">Ready to start? Take the first step by clicking the button below</h3>
+
+				<div class="closing-buttons" data-animation="tada">
+					<a href="#" class="anchor-link btn btn-lg btn-primary btn-email" style="margin:0;margin-bottom:5px" data-toggle="modal" data-target="#registrationModal">Reserve Your Account</a>
+				</div>
+
+			</div>
+
+		</section>
+		
+		
+		
+	</div><!--/container-->		
+	<!-- End Content Part -->
+	
+	<!-- Push div for sticky footer -->
+	<div class="push"></div>
+</div><!--/wrapper-->
+
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <a href="index-2.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
+                    <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
+                    <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>    
+                </div><!--/col-md-3-->
+                <!-- End About -->
+
+                <!-- Latest -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="posts">
+                        <div class="headline"><h2>Latest Posts</h2></div>
+                        <ul class="list-unstyled latest-list">
+                            <li>
+                                <a href="#">Incredible content</a>
+                                <small>May 8, 2014</small>
+                            </li>
+                            <li>
+                                <a href="#">Best shoots</a>
+                                <small>June 23, 2014</small>
+                            </li>
+                            <li>
+                                <a href="#">New Terms and Conditions</a>
+                                <small>September 15, 2014</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/col-md-3-->  
+                <!-- End Latest --> 
+                
+                <!-- Link List -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="headline"><h2>Useful Links</h2></div>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div><!--/col-md-3-->
+                <!-- End Link List -->                    
+
+                <!-- Address -->
+                <div class="col-md-3 map-img md-margin-bottom-40">
+                    <div class="headline"><h2>Contact Us</h2></div>                         
+                    <address class="md-margin-bottom-40">
+                        25, Lorem Lis Street, Orange <br />
+                        California, US <br />
+                        Phone: 800 123 3456 <br />
+                        Fax: 800 123 3456 <br />
+                        Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                    </address>
+                </div><!--/col-md-3-->
+                <!-- End Address -->
+            </div>
+        </div> 
+    </div><!--/footer-->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">                     
+                    <p>
+                        2014 &copy; All Rights Reserved.
+                       <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-6">
+                    <ul class="footer-socials list-inline">
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                <i class="fa fa-skype"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Social Links -->
+            </div>
+        </div> 
+    </div><!--/copyright-->
+</div>
+<!--=== End Footer Version 1 ===-->
+
+<!-- JS Global Compulsory -->			
+<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<!-- JS Page Level -->           
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
+<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        App.initSliders();
+        StyleSwitcher.initStyleSwitcher();      
+        ParallaxSlider.initParallaxSlider();
+    });
+</script>
+
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+</body>
+
+</html>

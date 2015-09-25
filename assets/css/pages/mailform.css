@@ -1,0 +1,22 @@
+.mail-info-block {
+	margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+	/*img.profile-avatar{
+		left: 16.67%;
+	}*/
+	
+	.profile-intro-right {
+		border-left: 2px solid white;
+		top: 20px;
+		padding-left: 30px;
+	}
+	/*.container {
+		width:750px;
+	}*/
+	 .media{
+
+ 	  margin-right: 30px;
+ }
+}

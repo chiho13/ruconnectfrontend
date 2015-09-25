@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RU Connect</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+    <link href="assets/css/pages/events.css" rel="stylesheet">
+    <link href="assets/css/pages/searchevents.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="assets/css/footers/footer-default.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--calendar plugin --> 
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+
+    
+    <link rel="stylesheet" href="assets/plugins/fullcalendar.css">
+    <link rel="stylesheet" href="assets/plugins/maps.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-datetimepicker.min.css">
+     <link rel="stylesheet" href="assets/css/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/buttons.css" /> 
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+       
+
+    <nav class="navbar navbar-fixed-top ru-nav" role="navigation">
+        <a href="#">
+            <img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" height="84px" src="https://s3.amazonaws.com/ruconnect-assets/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+        </a>
+
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+             <ul class="nav navbar-nav navbar-right main-menu-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Connected<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admin View</a></li>
+                        <li><a href="#">Non-admin View</a></li>
+                        
+                     </ul>
+                </li>
+                 <li><a href="#">myryerson.ca</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><i class="fa fa-envelope"></i></span> My Conversations<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Trash</a></li>
+                     </ul>
+                </li>
+
+               
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span> <img class="media-object nav-avatar" src="img/organisersanthony.png" style=""></span>Anthony Ho<span class="caret"></span></a>
+                    <ul class="dropdown-menu profile-menu">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <hr style="margin: 5px 0">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+  
+    </nav>
+
+    
+    <div class="search-event">
+        <img src="assets/img/bannerrsc.png">
+
+            <div class="search-container">
+                <h2> Find your next event!</h2>
+
+                <form id="adv-search">
+
+                <div class="col-sm-6 col-md-5 col-lg-5 ">
+
+                <input type='text' class="form-control searchbar" placeholder="Search for events"/>
+
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4">
+
+                    <select class="selectpicker">
+                        <option value="" disabled selected="">All Dates</option>
+                        <option>Today</option>
+                        <option>Tomorrow</option>
+                        <option>This Week</option>
+                        <option>This Weekend</option>
+                        <option>Next Week</option>
+                        <option>Next Month</option>
+                    </select>
+                   <!--  <div class='input-group' id='datetimepicker1'>
+                            <input type='n' class="form-control" id="dateinput" placeholder="Date and Time"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                    </div> -->
+                </div>
+           
+
+        <div class="col-md-2 col-lg-3 ">
+            <!-- <button class="btn btn-search">Search</button> -->
+            <button class="button button--naira button--border-thin button--naira-up"><i class="button__icon icon icon-search"></i><span>Search</span></button>
+        </div>
+
+            </form>
+
+         </div>
+    </div>
+    
+ 
+
+    
+
+
+
+    <div class="events-container">
+        <div class="main-title">
+            <h1> All Events</h1>
+        </div>
+        <div class="col-md-3">
+            <div class="tab-container "> 
+                <!-- <div class="card tab-card map-card"> -->
+                      <!-- <div id="map"></div> -->
+                    <!-- <div id="map"></div> -->
+                        <div class="nav-side-menu">
+        <div class="brand">
+            <span> 
+                <i class="fa fa-map-marker"></i>
+            </span>Toronto, ON
+        </div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                  <a href="#"> Category <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a href="#">CSS3 Animation</a></li>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Buttons</a></li>
+                    <li><a href="#">Tabs & Accordions</a></li>
+                    <li><a href="#">Typography</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#">Services <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>New Service 1</li>
+                  <li>New Service 2</li>
+                  <li>New Service 3</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"></i> New <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>New New 1</li>
+                  <li>New New 2</li>
+                  <li>New New 3</li>
+                </ul>
+
+            </ul>
+                    </div>
+                </div>
+    
+                <!-- </div> -->
+            </div> 
+        </div>
+
+         <div class="col-md-3 col-md-push-6">
+            <div class="tab-container"> 
+                <div class="card time-card">
+                   <!--  <div id="calendar"> -->
+
+                   
+                    <div class='input-group' id='datetimepicker1'>
+                            <input type='n' class="form-control" id="dateinput" placeholder="Date and Time"/>
+                            <span class="input-group-addon calendar-icon" style="cursor:pointer">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                    </div>
+
+                    <button class="form-control btn-times">Tomorrow</button>
+                    <button class="form-control btn-times">This Week</button>
+                    <button class="form-control btn-times">This Weekend</button>
+                    <button class="form-control btn-times">Next Week</button>
+                    <button class="form-control btn-times">Next Month</button>
+
+                    <!-- <a href="#" class="button button-winona">Today</a> -->
+                    </div>
+         
+    
+                </div>
+            </div> <!-- wizard container -->
+
+        <div class="col-md-6 col-md-pull-3">
+            <div class="tab-container"> 
+
+                
+                <div class="row">
+                    <div class="card events-card">
+                        <div>
+                        <img src="assets/img/rc4square.jpg">
+                        </div>
+                        
+                            <div class="events-block">
+                                <h3> Adopting Additive Manufacturing</h3>
+                                <h4> Conference by RC4 </h4>
+                               <h4> <span><i class="fa fa-calendar"></i></span>Wed, 8 Jul 12:00pm - 2:00pm </h4>
+                               <h5> <span><i class="fa fa-map-marker"></i></span> TRS 1-148 & 1-150, 7th Floor, Ted Rogers School of Management </h5>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="card events-card">
+                         <div>
+                        <img src="assets/img/rc4square.jpg">
+                        </div>
+                        
+                            <div class="events-block">
+                                <h3> Adopting Additive Manufacturing</h3>
+                                <h4> Conference by RC4 </h4>
+                               <h4> <span><i class="fa fa-calendar"></i></span>Wed, 8 Jul 12:00pm - 2:00pm </h4>
+                               <h5> <span><i class="fa fa-map-marker"></i></span> TRS 1-148 & 1-150, 7th Floor, Ted Rogers School of Management </h5>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="card events-card">
+                    </div>
+                </div>
+            </div> <!-- wizard container -->
+        </div>
+
+        
+        </div>
+
+    </div><!-- end row -->
+
+
+
+ 
+    <div class= "col-xs-12 footer">
+        <p> &copy 2015. Powered by 1 Degree Labs. All Rights Reserved. </p>
+    </div>
+   
+
+
+    
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+
+    <script src="assets/plugins/fullcalendar.js"></script>
+    <script src="assets/plugins/moment.min.js"></script>
+   
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.js"></script>
+  
+<!--google maps api --> 
+
+    <script src="assets/plugins/gmaps.js"></script>
+<!-- <script src="gmaps.js"></script> -->
+    <!-- <script src= "assets/js/app.js"></script>  --> 
+
+    <script src="assets/plugins/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
+<script>
+   
+    $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+    
+        $('#calendar').fullCalendar({
+            header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        editable: true,
+        
+        // add event name to title attribute on mouseover
+        eventMouseover: function(event, jsEvent, view) {
+            if (view.name !== 'agendaDay') {
+                $(jsEvent.target).attr('title', event.title);
+            }
+        },
+        
+        // For DEMO only
+        // *************
+        events: [
+            {
+            title: 'All Day Event',
+            start: new Date(2015, 9, 1)},
+        {
+            title: 'Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2)},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d - 3, 16, 0),
+            allDay: false},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d + 4, 16, 0),
+            allDay: false},
+        {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false},
+        {
+            title: 'Lunch',
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false},
+        {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false},
+        {
+            title: 'Click for Google',
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: 'http://google.com/'}
+        ]
+        });
+
+});
+
+</script>
+
+ <script>
+
+    // var map;
+    // $(document).ready(function(){
+    //   map = new GMaps({
+    //     el: '#map',
+    //     lat: -12.043333,
+    //     lng: -77.028333
+    //   });
+    //   map.addMarker({
+    //     lat: -12.043333,
+    //     lng: -77.03,
+    //     title: 'Lima',
+    //     details: {
+    //       database_id: 42,          
+    //       author: 'HPNeo'
+    //     },
+    //     click: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //       alert('You clicked in this marker');
+    //     },
+    //     mouseover: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //     }
+    //   });
+
+    // });
+
+// </script>
+  
+
+</body>
+
+</html>
+
+
+<!--   <div id="map"></div> -->
+
+

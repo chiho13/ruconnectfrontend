@@ -1,0 +1,49 @@
+.form-horizontal .control-label {
+ width:100%;
+ text-align:left;
+}
+
+#opportunities label i {
+ 
+  color: #1C5A98;
+  margin-bottom: -4px;
+  padding-left: 5px;
+}
+
+#opportunities label span {
+
+  color: #333;
+  
+}
+
+.title-label {
+	margin-left: -10px;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+.btn-update {
+	background: #1C5A98;
+	color:#fff;
+}
+
+.btn-update:hover {
+	opacity:0.9;
+	color:#fefefe;
+}
+/*.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+    border: 1px solid #5596CA;
+  
+}
+
+@media (min-width: 768px) {
+.nav-tabs.nav-justified>li>a {
+    border-bottom: 1px solid #5596CA;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+    border-bottom-color: #fff;
+
+}*/
+

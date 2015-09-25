@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RU Connect</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+<!--     <link href="assets/css/pages/events.css" rel="stylesheet"> -->
+   
+    <link href="assets/css/pages/browseB.css" rel="stylesheet">
+     
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="assets/css/footers/footer-default.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--calendar plugin --> 
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+
+    
+    <link rel="stylesheet" href="assets/plugins/fullcalendar.css">
+    <link rel="stylesheet" href="assets/plugins/maps.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap.vertical-tabs.css">
+     <link rel="stylesheet" href="assets/css/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/buttons.css" /> 
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/buttons.css" /> 
+    <link href="assets/css/pages/settings.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+       
+
+    <nav class="navbar navbar-fixed-top ru-nav" role="navigation">
+        <a href="#">
+            <img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" height="84px" src="https://s3.amazonaws.com/ruconnect-assets/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+        </a>
+
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+             <ul class="nav navbar-nav navbar-right main-menu-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Connected<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admin View</a></li>
+                        <li><a href="#">Non-admin View</a></li>
+                        
+                     </ul>
+                </li>
+                 <li><a href="#">myryerson.ca</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><i class="fa fa-envelope"></i></span> My Conversations<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Trash</a></li>
+                     </ul>
+                </li>
+
+               
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span> <img class="media-object nav-avatar" src="img/organisersanthony.png" style=""></span>Anthony Ho<span class="caret"></span></a>
+                    <ul class="dropdown-menu profile-menu">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <hr style="margin: 5px 0">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+  
+    </nav>
+
+    
+
+<div>
+  <div class="profile-header row">
+    <div class="container text-center">
+      <h2 class="no-margin">Settings</h2>
+    </div>
+  </div>
+  
+  <div class="container">
+    <!-- <div class="bg-white p-30 brad b-bot-2px-gray-light b-right-1px-gray-light"> -->
+      
+      <!--Profile Body-->
+      <div class="profile-body margin-bottom-20">
+        <div class="tab-v1">
+          <div class="col-xs-3">
+            <ul class="nav nav-tabs tabs-left">
+              <li class="<%= @settings_tab == 'opportunities' ? 'active' : '' %>"><a data-toggle="tab" href="#opportunities">Ryerson Opportunities</a></li>
+              <li class="<%= @settings_tab == 'conversation' ? 'active' : '' %>"><a data-toggle="tab" href="#conversations">Conversations</a></li>
+              <li class="<%= @settings_tab == 'password' ? 'active' : '' %>"><a data-toggle="tab" href="#password">Password</a></li>
+              <li class="<%= @settings_tab == 'account' ? 'active' : '' %>"><a data-toggle="tab" href="#account">Account</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-9">
+            <div class="tab-content">
+              <div id="opportunities" class="profile-edit tab-pane fade active <%= @settings_tab == 'opportunities' ? 'in active' : '' %>">
+              <h2 class="heading-md">Manage your Ryerson Opportunities</h2>
+<p>Below are the opportunities within Ryerson for which you can opt-in.</p>
+</br>
+
+<%= form_for(current_user.settings, :url => registration_path(resource_name), :html => { :class => "form-horizontal", :method => :put, :role => 'form'}) do |f| %>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Which events geared towards enhancing and expanding your professional and personal network would you like to participate in?</label>
+      <div class="col-sm-10 m-t-10">
+    
+      
+      <div class="m-b-10">
+          
+        <div class="col-sm-10 m-t-10">
+          <label class="title-label">Professional Development</label>
+          <label>
+          <%= f.check_box :networking %>
+          <span class="m-l-10"><%= f.label :networking, "Networking", class: "checkbox-label" %></span>
+          </label>
+
+        </div>
+        
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :career_development_workshops %>
+            <span class="m-l-10"><%= f.label :career_development_workshops, "Career Development Workshops", class: "checkbox-label" %></span>
+          </label>
+          </div>
+        
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :professional_courses %>
+            <span class="m-l-10"><%= f.label :professional_courses, "Professional Courses", class: "checkbox-label" %></span>
+          </label>
+          </div>
+        
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :webinars %>
+            <span class="m-l-10"><%= f.label :webinars, "Webinars", class: "checkbox-label" %></span>
+          </label>
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :keynote_speaker_events %>
+            <span class="m-l-10"><%= f.label :keynote_speaker_events, "Keynote Speaker Events", class: "checkbox-label" %></span>
+          </label>
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :leadership_roundtable_luncheons %>
+            <span class="m-l-10"><%= f.label :leadership_roundtable_luncheons, "Leadership Roundtable Luncheons", class: "checkbox-label" %></span>
+          </label>
+          </div>
+      
+        
+      <!-- </br></br></br></br></br></br></br></br></br> -->
+
+      
+        <div class="col-sm-10 m-t-10">
+          <label class="title-label">Events</label>
+      
+          <label>
+          <%= f.check_box :alumni_socials %>
+          <span class="m-l-10"><%= f.label :alumni_socials, "Alumni Weekends, Socials and Reunions", class: "checkbox-label" %></span> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Enjoy the camaraderie of old friends and the opportunity to revisit your favourite places and spaces on the campus."></i>
+          </label> 
+        </div>
+    
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :holiday_gala %>
+            <span class="m-l-10"><%= f.label :holiday_gala, "Holiday Gala", class: "checkbox-label" %></span>
+          </label>
+        </div>
+    
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :keynote_speaker %>
+          <span class="m-l-10"><%= f.label :keynote_speaker, "Keynote Speaker Events", class: "checkbox-label" %></span>
+          </label>
+        </div>
+        </div>
+   
+    </div>
+  </div>
+    <hr>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">How would you like to engage and give back to students?</label>
+     <div class="col-sm-10 m-t-10">
+      
+      <div class="m-b-10">
+        <div class="col-sm-10 m-t-10">
+        <label>
+          <%= f.check_box :taste %>
+          <span class="m-l-10"><%= f.label :taste, "TASTE (Take a Student to Explore)", class: "checkbox-label" %></span>
+        </label>
+          </div>
+      
+      <div class="col-sm-10 m-t-10">
+        <label>
+          <%= f.check_box :mentorship %>
+          <span class="m-l-10"><%= f.label :mentorship, "Mentorship Programs", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Opportunity to allow students the chance to connect about career and networking. Mentorship is about learning, dialogue and an experiential opportunity. Offered in various formats tailored to provide alumni with flexibility."></i>
+        </label> 
+      </div>
+    
+      <div class="col-sm-10 m-t-10">
+        <label>
+          <%= f.check_box :judge_case_competition %>
+          <span class="m-l-10"><%= f.label :judge_case_competition, "Judge Case Competition", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Leverage your experience and subject expertise by serving as a judge and participating in conferences and competitions organized by faculty, student associations and alumni groups."></i>
+        </label> 
+      </div>
+      
+      <div class="col-sm-10 m-t-10">
+        <label>
+          <%= f.check_box :guest_speaker %>
+          <span class="m-l-10"><%= f.label :guest_speaker, "Guest Speaker", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Make an impact and contribute by participating in a range of speaking opportunities, from presenting a seminar in your area of expertise or sitting on a panel of speakers addressing an intimate gathering or leading a question and answer period."></i>
+        </label> 
+      </div>
+      
+      <div class="col-sm-10 m-t-10">
+        <label>
+          <%= f.check_box :industry_career_panel %>
+          <span class="m-l-10"><%= f.label :industry_career_panel, "Industry Career Panel", class: "checkbox-label" %></span>
+        </label>
+      </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Which initiatives are you interested in partaking?</label>
+    <div class="col-sm-10 m-t-10">
+      
+      <div class="m-b-10">
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :hire %>
+            <span class="m-l-10"><%= f.label :hire, "Hire a Ryersonian", class: "checkbox-label" %></span>  <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Interested   in hiring top talent and making a difference for fellow Ryersonias? As an alum, you know the  value of the Ryerson degree and the benefits gained from valuable work experiences. Post an   internship, full-time job opportunity or share your professional experience and advice."></i>
+          </label> 
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :advisory_council %>
+          <span class="m-l-10"><%= f.label :advisory_council, "Advisory Council(s)", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="As an influential group of engaged and informed alumni, the alumni advisory council members provide advise to the Dean, Director of Development and the Alumni Engagement Officer."></i>
+          </label> 
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :exec_position_alumni_association %>
+          <span class="m-l-10"><%= f.label :exec_position_alumni_association, "Executive Positions on Alumni Associations", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Connect, re-connect and engage from your academic program, through enriching experiences, with your faculty, program and the university. Leverage your leadership and expertise to make an impact while you expand your network."></i>
+          </label> 
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :director_at_large %>
+          <span class="m-l-10"><%= f.label :director_at_large, "Director at Large Positions", class: "checkbox-label" %></span>
+          </label>
+          </div>
+    
+        <div class="col-sm-10 m-t-10">
+          <label>
+          <%= f.check_box :alumni_ambassador %>
+          <span class="m-l-10"><%= f.label :alumni_ambassador, "TRSM Alumni Ambassadors", class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="As an alumni ambassador you can help by supporting and advocating for your program faculty and university helping preserve and increase the value of your degree (s). Help start a new regional or international alumni chapter."></i>
+          </label> 
+          </div>
+      
+        <div class="col-sm-10 m-t-10">
+          <label>
+            <%= f.check_box :corporate_alumni_ambassador %>
+            <span class="m-l-10"><%= f.label :corporate_alumni_ambassador, "Corporate Alumni Ambassadors",   class: "checkbox-label" %></span><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Share your university experience in a positive and meaningful way with your employer. Use your own experiences at an employer to answer questions from Ryerson students interested in working at your organization."></i>
+          </label> 
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-4 col-sm-offset-4">
+      <%= hidden_field_tag(:tab, 'opportunities') %>
+      <%= f.submit 'Update', :class => 'btn btn-lg btn-update' %>
+    </div>
+  </div>
+<% end %>
+              </div>
+            
+              <div id="conversations" class="profile-edit tab-pane fade <%= @settings_tab == 'conversation' ? 'in active' : '' %>">
+              <%= render "conversation_settings" %>
+              </div>
+            
+              <div id="password" class="profile-edit tab-pane fade <%= @settings_tab == 'password' ? 'in active' : '' %>">
+              <%= render "password_settings" %>
+              </div>
+            
+              <div id="account" class="profile-edit tab-pane fade <%= @settings_tab == 'account' ? 'in active' : '' %>">
+              <%= render "account_settings" %>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <!--End Profile Body-->
+      
+    </div>
+  </div> <!-- container -->
+</div>
+
+
+ 
+    <div class= "col-xs-12 footer">
+        <p> &copy 2015. Powered by 1 Degree Labs. All Rights Reserved. </p>
+    </div>
+   
+
+
+    
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+
+    <script src="assets/plugins/fullcalendar.js"></script>
+    <script src="assets/plugins/moment.min.js"></script>
+   
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.js"></script>
+  
+<!--google maps api --> 
+
+    <script src="assets/plugins/gmaps.js"></script>
+<!-- <script src="gmaps.js"></script> -->
+    <!-- <script src= "assets/js/app.js"></script>  --> 
+
+    <script src="assets/plugins/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
+<script>
+   
+    $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+    
+        $('#calendar').fullCalendar({
+            header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        editable: true,
+        
+        // add event name to title attribute on mouseover
+        eventMouseover: function(event, jsEvent, view) {
+            if (view.name !== 'agendaDay') {
+                $(jsEvent.target).attr('title', event.title);
+            }
+        },
+        
+        // For DEMO only
+        // *************
+        events: [
+            {
+            title: 'All Day Event',
+            start: new Date(2015, 9, 1)},
+        {
+            title: 'Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2)},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d - 3, 16, 0),
+            allDay: false},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d + 4, 16, 0),
+            allDay: false},
+        {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false},
+        {
+            title: 'Lunch',
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false},
+        {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false},
+        {
+            title: 'Click for Google',
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: 'http://google.com/'}
+        ]
+        });
+
+});
+
+</script>
+
+ <script>
+
+    // var map;
+    // $(document).ready(function(){
+    //   map = new GMaps({
+    //     el: '#map',
+    //     lat: -12.043333,
+    //     lng: -77.028333
+    //   });
+    //   map.addMarker({
+    //     lat: -12.043333,
+    //     lng: -77.03,
+    //     title: 'Lima',
+    //     details: {
+    //       database_id: 42,          
+    //       author: 'HPNeo'
+    //     },
+    //     click: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //       alert('You clicked in this marker');
+    //     },
+    //     mouseover: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //     }
+    //   });
+
+    // });
+
+// </script>
+  
+
+
+</body>
+
+</html>
+
+
+<!--   <div id="map"></div> -->
+
+

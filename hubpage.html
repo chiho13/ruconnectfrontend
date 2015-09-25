@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RU Connect</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+<!--     <link href="assets/css/pages/events.css" rel="stylesheet"> -->
+   
+    <link href="assets/css/pages/browseB.css" rel="stylesheet">
+     
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="assets/css/footers/footer-default.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!--calendar plugin --> 
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+
+    
+    <link rel="stylesheet" href="assets/plugins/fullcalendar.css">
+    <link rel="stylesheet" href="assets/plugins/maps.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap.vertical-tabs.css">
+     <link rel="stylesheet" href="assets/css/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/css/buttons.css" /> 
+    <link href="assets/css/pages/hubpage.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+       
+
+    <nav class="navbar navbar-fixed-top ru-nav" role="navigation">
+        <a href="#">
+            <img alt="Ryerson University Logo" class="navbar-brand navbar-brand-img" height="84px" src="https://s3.amazonaws.com/ruconnect-assets/ru-official-logo.png" style="background-color: #1C5A98;padding-left:15px;" width="226px">
+        </a>
+
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+             <ul class="nav navbar-nav navbar-right main-menu-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Connected<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Admin View</a></li>
+                        <li><a href="#">Non-admin View</a></li>
+                        
+                     </ul>
+                </li>
+                 <li><a href="#">myryerson.ca</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><i class="fa fa-envelope"></i></span> My Conversations<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Trash</a></li>
+                     </ul>
+                </li>
+
+               
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span> <img class="media-object nav-avatar" src="img/organisersanthony.png" style=""></span>Anthony Ho<span class="caret"></span></a>
+                    <ul class="dropdown-menu profile-menu">
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <hr style="margin: 5px 0">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+  
+    </nav>
+
+    
+    <div class="hub-event">
+        <img id="banner" src="assets/img/bannerrsc.png">
+
+            <div class="hub-container">
+                <div class="col-sm-3">
+                <img id="hub-logo" src="assets/img/rsclogo.png">
+                </div>
+                <div class="col-sm-9">
+                    <div class="page-container">
+                    <h2> The Ryerson Commerce Society</h2>
+                    <p> Welcome to the RCS hub! </p>
+                    <br>
+                    <p>We are a student-elected society representing over 9000 full-time undergraduate students  attending the Ted Rogers School of Management at Ryerson University in Toronto, Ontario. </p>
+                    </div>
+                </div>
+         </div>
+    </div>
+    
+ 
+
+    
+
+
+
+    <div class="filter-container">
+        <!-- <div class="main-title">
+            <h1> All Members</h1>
+        </div> -->  
+
+        <div>
+            <div class="col-md-3 col-pull-3">
+                <div class="tab-container"> 
+                    <div class="card">
+                   <!--  <div id="calendar"> -->
+
+                  
+                        <ul class=" nav nav-tab tabs-left">
+                             <li class="past"><a href="#past" data-toggle="tab" class="form-control btn-times">Past Members</a></li>
+                            <li> <a href="#current" data-toggle="tab" class="form-control btn-times">Current Members</a></li>
+                        </ul>
+                    <!-- <a href="#" class="button button-winona">Today</a> -->
+                    </div>
+         
+    
+                </div>
+            </div> <!-- wizard container -->
+
+            <div class="col-md-9 member-container">
+                 <div class="tab-content">
+                    <div class="tab-pane active" id="past">
+                              <p> Sort by: </p>  
+
+                            <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Year<span class="caret"></span></a>
+                            <ul class="dropdown-menu sorting-filter">
+                                <li>
+                                    <label class"search-check" for="check-one">
+                
+                                        <input type="checkbox" name="check-one" id="check-one" value="checkone"/>
+                
+                                        <i></i> <span>2015</span>
+                
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class"search-check" for="check-two">
+                
+                                    <input type="checkbox" name="check-two" id="check-two" value="checktwo"/>
+                
+                                        <i></i> <span>2014</span>
+                
+                                    </label>
+                                </li>
+                        
+                            </ul>
+                        </div>
+
+                          <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty<span class="caret"></span></a>
+                            <ul class="dropdown-menu sorting-filter">
+                                <li>
+                                    <label class"search-check" for="check-e">
+                
+                                        <input type="checkbox" name="check-e" id="check-e" value="checkone"/>
+                
+                                        <i></i> <span>Economics</span>
+                
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class"search-check" for="check-sf">
+                
+                                    <input type="checkbox" name="check-sf" id="check-sf" value="checktwo"/>
+                
+                                        <i></i> <span>Statistics and Finance</span>
+                
+                                    </label>
+                                </li>
+
+                                 <li>
+                                    <label class"search-check" for="check-m">
+                
+                                    <input type="checkbox" name="check-m" id="check-m" value="checkm"/>
+                
+                                        <i></i> <span>Mathematics</span>
+                
+                                    </label>
+                                </li>
+                        
+                            </ul>
+                        </div>
+                            
+                
+      <div class="justify-profile">
+
+        <div class="col-lg-3 col-sm-4  col-xs-6 col-xxs-12 connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                           
+                              <img src="img/jgl.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4> Joseph Gordon-Levitt</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                    </div>
+
+        </div>
+
+                 <div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/leo.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Leonardo DiCaprio</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+                 <div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/ken.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4> Joseph Gordon-Levitt</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+                  <div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 connections">
+                   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/ksh.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Leonardo DiCaprio</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+                  <div class="col-lg-3 col-sm-4 col-xs-6 col-xxs-12 connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/obama.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Barack Obama</h4>
+                                  <h5> President of the United States</h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+            
+            </div>
+
+                    </div>
+                    <div class="tab-pane" id="current">
+                         <p> Sort by: </p>  
+
+                        <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Year graduated<span class="caret"></span></a>
+                            <ul class="dropdown-menu sorting-filter">
+                                <li>
+                                    <label class"search-check" for="check-one">
+                
+                                        <input type="checkbox" name="check-one" id="check-one" value="checkone"/>
+                
+                                        <i></i> <span>Y</span>
+                
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class"search-check" for="check-two">
+                
+                                    <input type="checkbox" name="check-two" id="check-two" value="checktwo"/>
+                
+                                        <i></i> <span>Country</span>
+                
+                                    </label>
+                                </li>
+                        
+                            </ul>
+                        </div>
+                        
+                        <div class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty<span class="caret"></span></a>
+                            <ul class="dropdown-menu sorting-filter">
+                                <li>
+                                    <label class"search-check" for="check-one">
+                
+                                        <input type="checkbox" name="check-one" id="check-one" value="checkone"/>
+                
+                                        <i></i> <span>Accounting and Business</span>
+                
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class"search-check" for="check-two">
+                
+                                    <input type="checkbox" name="check-two" id="check-two" value="checktwo"/>
+                
+                                        <i></i> <span>Economics</span>
+                
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class"search-check" for="check-two">
+                
+                                    <input type="checkbox" name="check-two" id="check-two" value="checktwo"/>
+                
+                                        <i></i> <span>Statistics and Finance</span>
+                
+                                    </label>
+                                </li>
+                        
+                            </ul>
+                        </div>
+                            <div class="row justify-profile">
+
+
+                  <div class="col-xs-2  connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/obama.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Barack Obama</h4>
+                                  <h5> President of the United States</h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+
+
+                <div class="col-xs-2  connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                           
+                              <img src="img/jgl.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4> Joseph Gordon-Levitt</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                    </div>
+
+                 </div>
+                
+                  <div class="col-xs-2  connections">
+                   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/ksh.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Leonardo DiCaprio</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+                 <div class="col-xs-2  connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/leo.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4>Leonardo DiCaprio</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+
+                 <div class="col-xs-2  connections">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                              
+                              <img src="img/ken.jpg" alt="" />
+                              <div class="row name"> 
+                                  <h4> Joseph Gordon-Levitt</h4>
+                                  <h5> Actor, Singer, Filmmaker </h5>
+                                                   
+                              </div>
+                            </div>
+                            <div class="back">
+                             
+                              <p class="profile-description">Filmography: Inception (2010), Premium Rush (2012), Batman: The Dark Knight Rise (2012)</p>
+                                <a href="http://ruconnect.ca" class="btn btn-viewprofile">View Profile</a>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+
+                
+
+            
+            </div>
+
+                    </div>
+                   
+                </div>
+            </div>
+
+    </div><!-- end row -->
+    </div>
+
+
+ 
+    <div class= "col-xs-12 footer">
+        <p> &copy 2015. Powered by 1 Degree Labs. All Rights Reserved. </p>
+    </div>
+   
+
+
+    
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+
+    <script src="assets/plugins/fullcalendar.js"></script>
+    <script src="assets/plugins/moment.min.js"></script>
+   
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.js"></script>
+  
+<!--google maps api --> 
+
+    <script src="assets/plugins/gmaps.js"></script>
+<!-- <script src="gmaps.js"></script> -->
+    <!-- <script src= "assets/js/app.js"></script>  --> 
+
+    <script src="assets/plugins/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
+<script>
+   
+    $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+    
+        $('#calendar').fullCalendar({
+            header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        editable: true,
+        
+        // add event name to title attribute on mouseover
+        eventMouseover: function(event, jsEvent, view) {
+            if (view.name !== 'agendaDay') {
+                $(jsEvent.target).attr('title', event.title);
+            }
+        },
+        
+        // For DEMO only
+        // *************
+        events: [
+            {
+            title: 'All Day Event',
+            start: new Date(2015, 9, 1)},
+        {
+            title: 'Long Event',
+            start: new Date(y, m, d - 5),
+            end: new Date(y, m, d - 2)},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d - 3, 16, 0),
+            allDay: false},
+        {
+            id: 999,
+            title: 'Repeating Event',
+            start: new Date(y, m, d + 4, 16, 0),
+            allDay: false},
+        {
+            title: 'Meeting',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false},
+        {
+            title: 'Lunch',
+            start: new Date(y, m, d, 12, 0),
+            end: new Date(y, m, d, 14, 0),
+            allDay: false},
+        {
+            title: 'Birthday Party',
+            start: new Date(y, m, d + 1, 19, 0),
+            end: new Date(y, m, d + 1, 22, 30),
+            allDay: false},
+        {
+            title: 'Click for Google',
+            start: new Date(y, m, 28),
+            end: new Date(y, m, 29),
+            url: 'http://google.com/'}
+        ]
+        });
+
+});
+
+</script>
+
+ <script>
+
+    // var map;
+    // $(document).ready(function(){
+    //   map = new GMaps({
+    //     el: '#map',
+    //     lat: -12.043333,
+    //     lng: -77.028333
+    //   });
+    //   map.addMarker({
+    //     lat: -12.043333,
+    //     lng: -77.03,
+    //     title: 'Lima',
+    //     details: {
+    //       database_id: 42,          
+    //       author: 'HPNeo'
+    //     },
+    //     click: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //       alert('You clicked in this marker');
+    //     },
+    //     mouseover: function(e){
+    //       if(console.log)
+    //         console.log(e);
+    //     }
+    //   });
+
+    // });
+
+// </script>
+  
+
+
+</body>
+
+</html>
+
+
+<!--   <div id="map"></div> -->
+
+
